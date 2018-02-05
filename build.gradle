@@ -1,0 +1,51 @@
+group 'org.hejwo.algorithms.course1'
+
+apply plugin: 'java'
+apply plugin: 'scala'
+
+sourceCompatibility = 1.8
+
+
+sourceSets {
+    jmh {
+        java {
+            srcDir 'src/jmh/java'
+        }
+        scala {
+            srcDir 'src/jmh/scala'
+        }
+        resources {
+            srcDir 'src/jmh/resources'
+        }
+        compileClasspath += sourceSets.main.runtimeClasspath
+        compileClasspath += sourceSets.test.runtimeClasspath
+
+        runtimeClasspath += sourceSets.main.runtimeClasspath
+        runtimeClasspath += sourceSets.test.runtimeClasspath
+    }
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    compile(
+            'org.scala-lang:scala-library:2.11.8',
+            'org.apache.commons:commons-collections4:4.1',
+            'org.apache.commons:commons-lang3:3.7',
+            'com.google.guava:guava:22.0',
+    )
+
+    testCompile(
+            'junit:junit:4.12',
+            'org.assertj:assertj-core:3.8.0',
+            'org.scalatest:scalatest_2.11:2.2.6',
+    )
+
+    jmhCompile(
+            'org.openjdk.jmh:jmh-core:1.20',
+            'org.openjdk.jmh:jmh-generator-annprocess:1.20'
+    )
+}
