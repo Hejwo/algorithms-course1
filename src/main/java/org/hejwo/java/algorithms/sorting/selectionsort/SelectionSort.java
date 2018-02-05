@@ -1,7 +1,5 @@
-package org.hejwo.java.algorithms.sorting;
+package org.hejwo.java.algorithms.sorting.selectionsort;
 
-import java.util.Collections;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
 

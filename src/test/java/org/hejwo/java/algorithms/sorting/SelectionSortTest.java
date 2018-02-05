@@ -2,6 +2,7 @@ package org.hejwo.java.algorithms.sorting;
 
 import java.util.List;
 
+import org.hejwo.java.algorithms.sorting.selectionsort.SelectionSort;
 import org.junit.Test;
 
 import com.google.common.collect.Lists;
