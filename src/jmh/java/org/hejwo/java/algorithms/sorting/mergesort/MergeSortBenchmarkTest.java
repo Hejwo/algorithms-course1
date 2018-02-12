@@ -33,7 +33,7 @@ public class MergeSortBenchmarkTest {
     @OutputTimeUnit(TimeUnit.MILLISECONDS)
     @Measurement(iterations = 5, time = 1)
     public void mergeSort(Blackhole bh) {
-        List<Integer> sorted = MergeSort.mergeSort(unsorted);
+        List<Integer> sorted = MergeSort.sort(unsorted);
 
         bh.consume(sorted);
     }

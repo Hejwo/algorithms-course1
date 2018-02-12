@@ -13,13 +13,13 @@ import static java.util.Objects.nonNull;
 
 public class MergeSort {
 
-    public static List<Integer> mergeSort(List<Integer> unsorted) {
+    public static List<Integer> sort(List<Integer> unsorted) {
         if (nonNull(unsorted) && unsorted.size() == 1) {
             return unsorted;
         } else {
             Pair<List<Integer>, List<Integer>> splitted = Utils.splitIntoTwo(unsorted);
-            List<Integer> left = mergeSort(splitted.getLeft());
-            List<Integer> right = mergeSort(splitted.getRight());
+            List<Integer> left = sort(splitted.getLeft());
+            List<Integer> right = sort(splitted.getRight());
             return mergeResults(Pair.of(left, right));
         }
     }
