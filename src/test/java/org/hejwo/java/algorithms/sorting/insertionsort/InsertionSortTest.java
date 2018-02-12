@@ -2,7 +2,6 @@ package org.hejwo.java.algorithms.sorting.insertionsort;
 
 import java.util.List;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 import com.google.common.collect.Lists;
@@ -21,7 +20,6 @@ public class InsertionSortTest {
     }
 
     @Test
-    @Ignore
     public void sort_shouldReturnSorted_whenAlreadySorted() {
         List<Integer> unsorted = Lists.newArrayList(1, 2, 3, 4, 5, 6, 7, 8);
 
