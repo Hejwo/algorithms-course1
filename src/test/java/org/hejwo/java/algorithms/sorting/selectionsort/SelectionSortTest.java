@@ -1,9 +1,8 @@
-package org.hejwo.java.algorithms.sorting;
+package org.hejwo.java.algorithms.sorting.selectionsort;
 
 import java.util.List;
 import java.util.StringJoiner;
 
-import org.hejwo.java.algorithms.sorting.selectionsort.SelectionSort;
 import org.junit.Test;
 
 import com.google.common.collect.Lists;
