@@ -1,5 +1,6 @@
 package org.hejwo.java.algorithms.inversioncount;
 
+import com.google.common.collect.Lists;
 import org.junit.Test;
 
 import java.util.List;
@@ -10,7 +11,7 @@ public class LogarithmicInversionCountTest {
 
     @Test
     public void countInversions_shouldReturn3() {
-        List<Integer> collection = com.google.common.collect.Lists.newArrayList(1, 3, 5, 2, 4, 6);
+        List<Integer> collection = Lists.newArrayList(1, 3, 5, 2, 4, 6);
 
         int countedInversions = LogarithmicInversionCount.countInversions(collection).getRight();
 
@@ -19,7 +20,7 @@ public class LogarithmicInversionCountTest {
 
     @Test
     public void countInversions_shouldReturn5() {
-        List<Integer> collection = com.google.common.collect.Lists.newArrayList(1, 20, 6, 4, 5);
+        List<Integer> collection = Lists.newArrayList(1, 20, 6, 4, 5);
 
         int countedInversions = LogarithmicInversionCount.countInversions(collection).getRight();
 
@@ -29,7 +30,7 @@ public class LogarithmicInversionCountTest {
     @Test
     public void countInversions_shouldReturnLargestPossibleInversion() {
         // Largest possible inversion is n(n-1) / 2
-        List<Integer> collection = com.google.common.collect.Lists.newArrayList(6, 5, 4, 3, 2, 1);
+        List<Integer> collection = Lists.newArrayList(6, 5, 4, 3, 2, 1);
         int n = collection.size();
 
         int countedInversions = LogarithmicInversionCount.countInversions(collection).getRight();
@@ -40,7 +41,7 @@ public class LogarithmicInversionCountTest {
 
     @Test
     public void countInversions_shouldReturn0() {
-        List<Integer> collection = com.google.common.collect.Lists.newArrayList(1, 12, 23, 34, 45, 56);
+        List<Integer> collection = Lists.newArrayList(1, 12, 23, 34, 45, 56);
 
         int countedInversions = LogarithmicInversionCount.countInversions(collection).getRight();
 
@@ -49,7 +50,7 @@ public class LogarithmicInversionCountTest {
 
     @Test
     public void countInversions_shouldReturn0_whenEmpty() {
-        List<Integer> collection = com.google.common.collect.Lists.newArrayList();
+        List<Integer> collection = Lists.newArrayList();
 
         int countedInversions = LogarithmicInversionCount.countInversions(collection).getRight();
 
@@ -58,7 +59,7 @@ public class LogarithmicInversionCountTest {
 
     @Test
     public void countInversions_shouldReturn0_whenSingle() {
-        List<Integer> collection = com.google.common.collect.Lists.newArrayList(2341);
+        List<Integer> collection = Lists.newArrayList(2341);
 
         int countedInversions = LogarithmicInversionCount.countInversions(collection).getRight();
 
@@ -76,7 +77,7 @@ public class LogarithmicInversionCountTest {
 
     @Test
     public void countInversions_shouldHandleDuplicatesAtEnd() {
-        List<Integer> collection = com.google.common.collect.Lists.newArrayList(1, 20, 6, 4, 5, 20, 20, 20);
+        List<Integer> collection = Lists.newArrayList(1, 20, 6, 4, 5, 20, 20, 20);
 
         int countedInversions = LogarithmicInversionCount.countInversions(collection).getRight();
 
@@ -85,7 +86,7 @@ public class LogarithmicInversionCountTest {
 
     @Test
     public void countInversions_shouldHandleDuplicatesInMiddle() {
-        List<Integer> collection = com.google.common.collect.Lists.newArrayList(1, 20, 6, 4, 20, 20, 20, 5);
+        List<Integer> collection = Lists.newArrayList(1, 20, 6, 4, 20, 20, 20, 5);
 
         int countedInversions = LogarithmicInversionCount.countInversions(collection).getRight();
 

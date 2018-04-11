@@ -32,16 +32,18 @@ repositories {
 
 dependencies {
     compile(
-            'org.scala-lang:scala-library:2.11.8',
+            'org.scala-lang:scala-library:2.12.3',
             'org.apache.commons:commons-collections4:4.1',
             'org.apache.commons:commons-lang3:3.7',
             'com.google.guava:guava:22.0',
+
+            'com.typesafe.akka:akka-actor_2.12:2.5.10'
     )
 
     testCompile(
             'junit:junit:4.12',
             'org.assertj:assertj-core:3.8.0',
-            'org.scalatest:scalatest_2.11:2.2.6',
+            'org.scalatest:scalatest_2.12:3.0.5',
     )
 
     jmhCompile(
