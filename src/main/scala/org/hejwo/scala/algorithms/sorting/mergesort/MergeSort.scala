@@ -2,6 +2,16 @@ package org.hejwo.scala.algorithms.sorting.mergesort
 
 object MergeSort {
 
+  /**
+    * This one is not used due to O(n ^^ 2) complexity
+    */
+  def mergeRec(left: List[Int], right: List[Int]): List[Int] = (left, right) match {
+    case (left, Nil) => left
+    case (Nil, right) => right
+    case (leftHead::leftTail, rightHead::rightTail) if leftHead <= rightHead => leftHead::mergeRec(leftTail, right)
+    case (leftHead::leftTail, rightHead::rightTail) if leftHead > rightHead => rightHead::mergeRec(left, rightTail)
+  }
+
   def merge(left: List[Int], right: List[Int]) = {
     def getElementAt(list: List[Int], index: Int) = if (list.isDefinedAt(index)) Some(list(index)) else None
     def maxSize(left: List[Int], right: List[Int]): Int = if (left.size > right.size) left.size else right.size

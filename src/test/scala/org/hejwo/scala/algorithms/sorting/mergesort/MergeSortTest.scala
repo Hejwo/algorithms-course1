@@ -1,6 +1,5 @@
 package org.hejwo.scala.algorithms.sorting.mergesort
 
-import org.hejwo.scala.algorithms.sorting.selectionsort.SelectionSort.sort
 import org.scalatest.{FlatSpec, Matchers}
 
 class MergeSortTest extends FlatSpec with Matchers {
@@ -47,6 +46,24 @@ class MergeSortTest extends FlatSpec with Matchers {
     val list2 = List(1, 2)
 
     val merged = MergeSort.merge(list1, list2)
+
+    merged shouldBe List(1, 2, 4, 5, 6, 7)
+  }
+
+  "mergeRec" should "join for right array smaller and equal size" in {
+    val list1 = List(4, 5, 6)
+    val list2 = List(1, 2, 3)
+
+    val merged = MergeSort.mergeRec(list1, list2)
+
+    merged shouldBe List(1, 2, 3, 4, 5, 6)
+  }
+
+  "mergeRec" should "join for right array smaller" in {
+    val list1 = List(4, 5, 6, 7)
+    val list2 = List(1, 2)
+
+    val merged = MergeSort.mergeRec(list1, list2)
 
     merged shouldBe List(1, 2, 4, 5, 6, 7)
   }
